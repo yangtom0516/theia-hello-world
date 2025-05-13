@@ -23,10 +23,27 @@ export class HelloWorldCommandContribution implements CommandContribution {
 @injectable()
 export class HelloWorldMenuContribution implements MenuContribution {
 
+    private static readonly EXTENSIONS_MENU: string[] = [
+        ...CommonMenus.HELP,
+        'extensions'
+    ];
+
     registerMenus(menus: MenuModelRegistry): void {
-        menus.registerMenuAction(CommonMenus.EDIT_FIND, {
-            commandId: HelloWorldCommand.id,
-            label: HelloWorldCommand.label
-        });
+        /* 1️⃣ Create “Extensions” under the Help top-level menu */
+        menus.registerSubmenu(
+            HelloWorldMenuContribution.EXTENSIONS_MENU,
+            'Extensions'
+        );
+
+        /* 2️⃣ Place the “Say Hello” command inside that submenu */
+        menus.registerMenuAction(
+            HelloWorldMenuContribution.EXTENSIONS_MENU,
+            {
+                commandId: HelloWorldCommand.id,
+                label: HelloWorldCommand.label,
+                order: '00'
+            }
+        );
     }
+
 }
