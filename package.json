@@ -20,6 +20,6 @@
     "lerna": "2.4.0"
   },
   "workspaces": [
-    "hello-world", "welcome-page", "browser-app", "electron-app"
+    "theia-extension/hello-world", "theia-extension/welcome-page", "browser-app", "electron-app"
   ]
 }

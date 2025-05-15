@@ -1,0 +1,43 @@
+.gs-container {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 20px;
+    color: var(--theia-foreground);
+}
+
+.gs-content {
+    padding: 10px;
+}
+
+.gs-section {
+    margin-bottom: 30px;
+}
+
+.gs-section-header {
+    border-bottom: 1px solid var(--theia-border);
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.gs-text-bold {
+    font-weight: bold;
+}
+
+.quick-access-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.quick-access-list li {
+    margin: 8px 0;
+}
+
+.quick-access-list a {
+    text-decoration: none;
+    color: var(--theia-textLink-foreground);
+}
+
+.quick-access-list a:hover {
+    text-decoration: underline;
+}
