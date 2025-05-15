@@ -4,3 +4,7 @@ lib
 *.log
 *-app/*
 !*-app/package.json
+electron/dist/
+electron-app/lib/
+electron-app/src-gen/
+*.exe
